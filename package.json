@@ -1,0 +1,24 @@
+{
+  "name": "eleicoes_fic",
+  "version": "1.0.0",
+  "description": "eleições fictícias senac",
+  "repository": {
+    "type": "git",
+    "url": "]"
+  },
+  "license": "MIT",
+  "author": "ferianifausto",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "ejs": "^6.0.1",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
