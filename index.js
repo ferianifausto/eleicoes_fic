@@ -1,6 +1,7 @@
 import express from 'express'
 import { candidatoRouter } from './src/routes/candidatoRouter.js'
 import { candidatoViewRouter } from './src/routes/candidatoViewRouter.js'
+import { votosRouter } from './src/routes/votosRouter.js'
 import path from 'node:path'
 const app = express()
 
@@ -10,6 +11,7 @@ app.use(express.json())
 // chave base da url da api, para que todas as rotas do candidatoRouter fiquem dentro de /api
 app.use('/api', candidatoRouter)
 app.use('/', candidatoViewRouter)
+app.use('/api', votosRouter)
 
 app.listen(3000, () => {
   console.log('Server is running on http://localhost:3000')

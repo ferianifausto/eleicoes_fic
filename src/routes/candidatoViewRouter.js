@@ -9,7 +9,7 @@ candidatoViewRouter.get('/candidatos', (req, res) => {
 })
 
 // Rota para buscar um candidato pelo número da urna
-candidatoViewRouter.get('/candidatos/:id', (req, res) => {
+candidatoViewRouter.get('/candidato/:id', (req, res) => {
     const numero = parseInt(req.params.id)
     const candidato = candidatos.find(cand => cand.numeroUrna === numero)
     if (candidato) {
@@ -19,5 +19,7 @@ candidatoViewRouter.get('/candidatos/:id', (req, res) => {
         res.status(404).json({ error: 'Candidato não encontrado' })
     }
 })
+
+
 
 export { candidatoViewRouter }

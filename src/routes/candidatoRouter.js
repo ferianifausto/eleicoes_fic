@@ -4,12 +4,12 @@ import { candidatos } from "../dados/candidatos.js";
 const candidatoRouter = Router();
 
 // Rota para buscar todos os candidatos
-candidatoRouter.get('/candidatos', (req, res) => {
+candidatoRouter.get('/candidato', (req, res) => {
     res.json(candidatos)
 })
 
 // Rota para buscar um candidato pelo número da urna
-candidatoRouter.get('/candidatos/:id', (req, res) => {
+candidatoRouter.get('/candidato/:id', (req, res) => {
     const numero = parseInt(req.params.id)
     const candidato = candidatos.find(cand => cand.numeroUrna === numero)
     if (candidato) {
