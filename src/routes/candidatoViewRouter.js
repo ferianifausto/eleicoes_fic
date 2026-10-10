@@ -5,7 +5,11 @@ const candidatoViewRouter = Router();
 
 // Rota para buscar todos os candidatos
 candidatoViewRouter.get('/candidatos', (req, res) => {
-    res.render('home', {titulo : 'Lista de Candidatos xxx', candidatos })
+    res.render('home', 
+        {
+            titulo : 'Lista de Candidatos xxx', 
+            candidatos 
+        })
 })
 
 // Rota para buscar um candidato pelo número da urna
@@ -20,6 +24,4 @@ candidatoViewRouter.get('/candidato/:id', (req, res) => {
     }
 })
 
-
-
-export { candidatoViewRouter }
+export default candidatoViewRouter

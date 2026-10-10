@@ -20,5 +20,5 @@ candidatoRouter.get('/candidato/:id', (req, res) => {
     }
 })
 
-export { candidatoRouter }
+export default candidatoRouter
 
